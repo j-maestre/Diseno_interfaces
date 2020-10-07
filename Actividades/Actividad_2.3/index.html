@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+</head>
+<body>
+    <h1><b>Informacion sobre el producto</b></h1>
+
+    
+        <fieldset>
+            <legend>Datos basicos</legend>
+            <label for="nombre">Nombre: </label></br>
+                <input type="text" id="nombre" name="nombre"></br>
+            <label for="nombre">Descripción</label></br>
+            <textarea id="descripcion" name="descripcion" rows="5" cols="50"></textarea></br>
+
+            <label for="Foto">Foto </label></br>
+                <input type="text" id="ruta" name="ruta" readonly="true">
+                <input type="button" id="foto" name="foto" value="Elegir..."></br></br>
+
+            <input type="checkbox" id="checkbox" name="checkbox"> Añadir contador de visitas
+        </fieldset>
+        
+    </br>
+
+        <fieldset>
+            <legend>Datos economicos</legend>
+            <label for="precio">Precio </label>
+            <input type="text" id="precio" name="precio" size="2">€&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+            <label for="impuestos">Impuestos</label>
+            <select name="%" id="%">
+                <option value="4">4%</option>
+                <option value="7">7%</option>
+                <option value="16">16%</option>
+                <option value="25">25%</option>
+            </select></br></br>
+
+            <label for="promocion" id="promocion" name="promocion">Promocion</label></br>
+                <input type="radio" id="ninguno" name="n" value="">
+            <label for="niguno">Ninguno</label></br>
+                <input type="radio" id="T.publico" name="n" value="Transporte publico">
+            <label for="T.publico">Transporte publico</label></br>
+                <input type="radio" id="desc" name="n" value="Descuento 5%">
+            <label for="desc">Descuento 5%</label></br>
+        </fieldset>
+
+
+</body>
+</html>

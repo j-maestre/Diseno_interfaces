@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Una casa2 con CSS</title>
+  <style type="text/css">
+    div{
+      position: absolute;
+      border: solid black 3px;
+      padding: 5px;
+    }
+
+    div.casa{
+        display: flex;
+      height: 250px;
+      width: 300px;
+      background-color: grey;
+      top:100px;
+      left:150px;
+    }
+    div.tejado{
+      height: 15px;
+      width: 330px;
+      background-color: purple;
+    }
+    .pany{
+      top:60px;
+      border:0px;
+    }
+
+  </style>
+</head>
+<body>
+  <div id="h1" class="casa">
+    <div class="tejado"></div>
+    <div class="puerta"><div class="pany">º</div></div>
+  </div>
+</body>
+</html>
+<!--
+<div id="h1" class="casa">
+   <div class="tejado" />
+   <div class="puerta"><h1>door</h1></div>
+   <div class="ventana1"></div>
+   <div class="ventana2"></div>
+</div>
+-->

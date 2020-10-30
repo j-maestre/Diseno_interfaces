@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Una casa con CSS</title>
+  <style type="text/css">
+    div{
+      position: absolute;
+      border: solid black 3px;
+      padding: 5px;
+    }
+    span{
+      position: absolute;
+      padding: 5px;
+    }
+
+    div.casa{
+      display: block;
+      height: 250px;
+      width: 300px;
+      background-color: grey;
+      top:100px;
+      left:100px;
+    }
+    div.tejado{
+      height: 15px;
+      width: 330px;
+      background-color: purple;
+      /* margin-top: 0px; */
+      margin-left: 78px;
+      margin-top: 64px;
+    }
+    .pany{
+      top:50%;
+      border:0px;
+      right: 2px;
+      left: 5px;
+    }
+    div.puerta{
+      /* padding-top: 0%; */
+      
+      width: 50px;
+      height: 80px;
+      margin-top: 162px;
+      margin-left: 38%;
+      margin-right: 50%;
+      background-color: rgb(122, 18, 18);
+    }
+    .ventanas{
+      margin-top:10px;
+      margin-left: 10px;
+    }
+    
+
+    .casa__ventanas--arriba, .casa__ventanas--abajo{
+      display: inline-block;
+      
+    }
+    .casa__ventanas--arriba{
+      margin-top: -25px ;
+    }
+    .casa__ventanas--abajo{
+      margin-top:100px;
+    }
+    .casa__ventanas__ventana1, .casa__ventanas__ventana2{
+      width: 30px;
+      height: 30px;
+      background-color: green;
+    }
+    .casa__ventanas__ventana1{
+      /* display: inline-block; */
+      margin-top: 40px;
+      margin-right: 200px;
+    }
+    .casa__ventanas__ventana2{
+      margin-left: 200px;
+      margin-top: 40px;
+      /* margin-right: 10px; */
+    }
+    .chimenea{
+      height: 40px;
+      width: 15px;
+      margin-left: 107px;
+      margin-top: 11px;
+      background-color: rgb(131, 0, 0);
+    }
+
+
+  </style>
+</head>
+<body>
+  <div class="chimenea"></div>
+  <div class="tejado"></div>
+  <div id="h1" class="casa">
+    
+    <span class="ventanas">
+      <span class="casa__ventanas--arriba">
+        <div class="casa__ventanas__ventana1"> </div>
+        <div class="casa__ventanas__ventana2"></div>
+      </span>
+
+      <span class="casa__ventanas--abajo">
+        <div class="casa__ventanas__ventana1"></div>
+        <div class="casa__ventanas__ventana2"></div>
+      </span>
+  </span>
+
+
+    <div class="puerta"><div class="pany">º</div></div>
+  </div>
+</body>
+</html>
+<!--
+<div id="h1" class="casa">
+   <div class="tejado" />
+   <div class="puerta"><h1>door</h1></div>
+   <div class="ventana1"></div>
+   <div class="ventana2"></div>
+</div>
+-->

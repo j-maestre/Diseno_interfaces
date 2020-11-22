@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
+
+:root{
+    --font:'Itim', cursive;
+}
+.fondo *{
+    display: block;
+    position: absolute;
+    
+}
+.fondo__horizontal--verde_oscuro{
+    background-color: green;
+    width: 100%;
+    height: 200px;
+    margin-top: 3%;
+    z-index: 0;
+}
+
+.fondo__vertical--verde_claro{
+    background-color: rgb(70, 165, 70);
+    height: 100%;
+    width: 250px;
+    margin-left: 10px;
+    z-index: 1;
+}
+
+.fondo__img--redonda{
+    width: 180px;
+    height: 180px;
+    border-radius: 150px;
+    margin-top: 3%;
+    margin-left: 40px;
+    z-index:2;
+}
+
+header *{
+    position: absolute;
+    font-family: var(--font);
+    z-index: 4;
+    margin-left: 20%;
+}
+.header__oficio{
+    margin-top: 10%;
+    font-size: 40px;
+    color: rgb(182, 181, 181);
+}
+h1{
+    color: whitesmoke;
+    margin-top: 3%;
+    font-size:100px;
+}
+
+.perfil *{
+    color: whitesmoke;
+    position: absolute;
+    font-family: var(--font);
+    margin-left: 3%;
+    margin-top: 15%;
+    z-index: 5;   
+}
+
+.perfil article{
+    margin-left: 2%;
+    margin-top: 17%;
+}
+
+
+
+/* Zona izquierda */
+.perfil__tlf, .perfil__gmail, .perfil__github{
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-radius: 150px;
+    margin-left: 1%;
+}
+
+.perfil__tlf__txt, .perfil__gmail__txt, .perfil__github__txt{
+    position:absolute;
+    margin-left: 3.3%;
+}
+.perfil__tlf{
+    margin-top: 22%;
+}
+.perfil__gmail{
+    margin-top: 25%;
+}
+
+.perfil__github{
+    margin-top: 28%;
+}
+.perfil__tlf__txt{
+    margin-top: 22.7%;
+}
+.perfil__gmail__txt{
+    margin-top: 25.7%;
+}
+.perfil__github__txt{
+    margin-top: 28.7%;
+}
+/* Fin zona izquierda */
+
+/* Zona centro */
+.titulaciones{
+    position: absolute;
+    z-index: 6;
+    margin-left: 18%;
+    margin-top: 15%;
+    font-family: var(--font);
+}
+
+.center__menu{
+    position:absolute;
+    z-index: 7;
+    width: 95%;
+    
+    display: flex;
+    justify-content: space-around;
+    border-style: inset ;
+    margin-top: 2%;
+    margin-left:2%;
+    margin-right: 0%;
+    background-color:  green;
+}
+.center{
+    position:absolute;
+    z-index: 7;
+    width: 70%;
+    height: 67%;
+    /* display: flex; */
+    /* justify-content: space-around; */
+    border-style: inset ;
+    margin-top: 17%;
+    margin-left:22%;
+    margin-right: 0%;
+    background-color:  rgb(70, 165, 70);
+}
+.center__menu p{
+    position: relative;
+    /* border-style: groove; */
+    height: 50px;
+    width: 33%;
+    /* margin-left: 10%; */
+    /* margin-right: 10%; */
+    /* background-color: black; */
+}
+
+/* Fin zona centro */

@@ -1,7 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
 
+body{
+    background-color: rgba(248, 236, 214, 0.705);
+}
+
 :root{
     --font:'Itim', cursive;
+    --fondo1:#3e5f8a;
+    --fondo2:rgb(81, 109, 131);
 }
 .fondo *{
     display: block;
@@ -9,7 +15,7 @@
     
 }
 .fondo__horizontal--verde_oscuro{
-    background-color: green;
+    background-color: var(--fondo2);
     width: 100%;
     height: 200px;
     margin-top: 3%;
@@ -17,7 +23,7 @@
 }
 
 .fondo__vertical--verde_claro{
-    background-color: rgb(70, 165, 70);
+    background-color: var(--fondo1);
     height: 100%;
     width: 250px;
     margin-left: 10px;
@@ -120,7 +126,7 @@ h1{
     margin-top: 2%;
     margin-left:2%;
     margin-right: 0%;
-    background-color:  green;
+    background-color:  var(--fondo1);
 }
 .center{
     position:absolute;
@@ -129,20 +135,159 @@ h1{
     height: 67%;
     /* display: flex; */
     /* justify-content: space-around; */
-    border-style: inset ;
+    /* border-style: inset ; */
     margin-top: 17%;
     margin-left:22%;
     margin-right: 0%;
-    background-color:  rgb(70, 165, 70);
+    background-color:  white;
 }
 .center__menu p{
-    position: relative;
-    /* border-style: groove; */
-    height: 50px;
-    width: 33%;
-    /* margin-left: 10%; */
-    /* margin-right: 10%; */
-    /* background-color: black; */
+    flex-grow: 1;
+    height: 100%;
+    margin: 0;
+    padding: 20px;
+    /* align-self: center; */
+    display: flex;
+    justify-content: center;
 }
 
+
+/* Zona centro slider */
+
+.center__body{
+    display: block;
+    position: absolute;
+    height: 70%;
+    width: 95%;
+    margin-top: 10%;
+    margin-left:2%;
+
+    background-color: var(--fondo1);
+}
+
+/* Fin zona centro slider */
+
 /* Fin zona centro */
+
+
+
+/* Slider */
+* {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  margin-top:19%;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: -100px;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev{
+    left: -100px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+.mySlides{
+    position: absolute;
+    height: 70%;
+    width: 95%;
+}
+
+.prev, .next{
+    
+}
+
+
+
+
+
+.puntitos{
+    margin-top: 35%;
+}
+
+/* Fin slider */

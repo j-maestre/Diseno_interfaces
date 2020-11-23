@@ -3,6 +3,10 @@
 body{
     background-color: rgba(248, 236, 214, 0.705);
 }
+p,h1,h2,article{
+    font-family: var(--font); 
+    color: white;
+}
 
 :root{
     --font:'Itim', cursive;
@@ -41,7 +45,6 @@ body{
 
 header *{
     position: absolute;
-    font-family: var(--font);
     z-index: 4;
     margin-left: 20%;
 }
@@ -59,7 +62,6 @@ h1{
 .perfil *{
     color: whitesmoke;
     position: absolute;
-    font-family: var(--font);
     margin-left: 3%;
     margin-top: 15%;
     z-index: 5;   
@@ -112,14 +114,13 @@ h1{
     z-index: 6;
     margin-left: 18%;
     margin-top: 15%;
-    font-family: var(--font);
+    
 }
 
 .center__menu{
     position:absolute;
     z-index: 7;
     width: 95%;
-    
     display: flex;
     justify-content: space-around;
     border-style: inset ;
@@ -133,9 +134,6 @@ h1{
     z-index: 7;
     width: 70%;
     height: 67%;
-    /* display: flex; */
-    /* justify-content: space-around; */
-    /* border-style: inset ; */
     margin-top: 17%;
     margin-left:22%;
     margin-right: 0%;
@@ -146,10 +144,17 @@ h1{
     height: 100%;
     margin: 0;
     padding: 20px;
+    font-size: 20px;
     /* align-self: center; */
     display: flex;
     justify-content: center;
 }
+/* .active:hover{
+    cursor: pointer;
+    animation-name: fade_menu;
+    animation-duration: 0.5s;
+    background-color: var(--fondo2);
+} */
 
 
 /* Zona centro slider */
@@ -194,7 +199,6 @@ h1{
   width: auto;
   margin-top: -22px;
   padding: 16px;
-  color: white;
   font-weight: bold;
   font-size: 18px;
   transition: 0.6s ease;
@@ -239,19 +243,22 @@ h1{
 }
 
 /* The dots/bullets/indicators */
-.dot {
+.dot{
   cursor: pointer;
   height: 15px;
   width: 15px;
   margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
+  background-color: var(--fondo2);
+  /* border-radius: 50%; */
   display: inline-block;
   transition: background-color 0.6s ease;
 }
 
 .active, .dot:hover {
-  background-color: #717171;
+  /* background-color: rgba(0, 132, 255, 0.548); */
+  border: 1px solid;
+  /* padding: 10px; */
+  box-shadow: 0px 10px 18px var(--fondo1);
 }
 
 /* Fading animation */
@@ -271,6 +278,10 @@ h1{
   from {opacity: .4}
   to {opacity: 1}
 }
+@keyframes fade_menu {
+    from {background-color: var(--fondo1)}
+    to {background-color: var(--fondo2)}
+  }
 
 .mySlides{
     position: absolute;
@@ -278,12 +289,10 @@ h1{
     width: 95%;
 }
 
-.prev, .next{
-    
+.mySlides__frontend{
+    width: 60px;
+    height: 60px;
 }
-
-
-
 
 
 .puntitos{

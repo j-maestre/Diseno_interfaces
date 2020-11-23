@@ -77,9 +77,9 @@
 
         <section class="center">
             <section class="center__menu">
-                <p class="center__menu__education">Education</p>  <!-- Añadir clase active para cuando este seleccionado-->
-                <p class="center__menu__work">Work Experience</p>
-                <p class="center__menu__skills">Skills</p>
+                <p class="center__menu__education dot" onclick="currentSlide(1)">Education</p>  <!-- Añadir clase active para cuando este seleccionado-->
+                <p class="center__menu__work dot" onclick="currentSlide(2)">Work Experience</p>
+                <p class="center__menu__skills dot" onclick="currentSlide(3)">Skills</p>
             </section>
 
             <section class="center__body">
@@ -89,19 +89,37 @@
                     <!-- Full-width images with number and caption text -->
                     <div class="mySlides fade">
                         
-                        <p>HOLAA1</p>
+                        <h2>2019-2021 Desarrollo de Aplicaciones Web</h2><br/>
+                        <article>IES l'Estació Ontinyent</article><br/>
+                        <article>Cursando este curso actualmente</article><br/>
+
+                        <h2>2016-2018 Bachillerato Ciencias Sociales</h2><br/>
+                        <article>Colegio La Concepción Ontinyent</article><br/>
                         <div class="text">Caption Text</div>
                     </div>
                 
                     <div class="mySlides fade">
                       
-                        <p>HOLAA2</p>
+                        <h2>Junio-2018 Septiembre-2018 Socorrista</h2><br/>
+                        <article>Socorrista Piscina municipal d'Ontinyent</article><br/>
                         <div class="text">Caption Two</div>
                     </div>
                 
                     <div class="mySlides fade">
                         
-                        <p>HOLAA3</p>
+                        <h2>Frontend</h2>
+                        <img src="./css/media/javascript.png" class="mySlides__frontend">
+                        <img src="./css/media/java.png" class="mySlides__frontend">
+                        <img src="./css/media/AngularJS-Shield.svg" class="mySlides__frontend">
+                        <h2>Backend</h2>
+                        <img src="./css/media/php.jpg" class="mySlides__backend">
+                        <img src="./css/media/MongoDB.jpg" class="mySlides__backend">
+                        <img src="./css/media/mysql.jpg" class="mySlides__backend">
+                        <h2>Other</h2>
+                        <img src="./css/media/docker.jpg" class="mySlides__other">
+                        <img src="./css/media/git.jpg" class="mySlides__other">
+                        <img src="./css/media/nodejs.jpg" class="mySlides__other">
+
                         <div class="text">Caption Three</div>
                     </div>
                 
@@ -110,11 +128,11 @@
                     <a class="next" onclick="plusSlides(1)">&#10095;</a>
                 </div>
 
-                <div class="puntitos" style="text-align:center">
+                <!-- <div class="puntitos" style="text-align:center">
                     <span class="dot" onclick="currentSlide(1)"></span>
                     <span class="dot" onclick="currentSlide(2)"></span>
                     <span class="dot" onclick="currentSlide(3)"></span>
-                  </div>
+                </div> -->
             <br>
 
             </section>

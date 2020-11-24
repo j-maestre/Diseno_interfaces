@@ -49,3 +49,19 @@ function showSlides(n) {
 
 }
 
+function contactMe(contact = true){
+  if(contact){
+    document.getElementById("contactSection").hidden=false;
+    document.getElementById("center").hidden=true;
+  }else{
+    document.getElementById("contactSection").hidden=true;
+    document.getElementById("center").hidden=false;
+  }
+}
+
+function sendEmail(){
+  alert("Done!");
+  contactMe(false);
+}
+
+

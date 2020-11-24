@@ -7,6 +7,14 @@ p,h1,h2,article{
     font-family: var(--font); 
     color: white;
 }
+.button{
+    border-style: inset;
+    background-color: var(--fondo2);
+}
+.button:hover{
+    cursor: pointer;
+    box-shadow: 5px 5px 5px white;
+}
 
 :root{
     --font:'Itim', cursive;
@@ -83,9 +91,15 @@ h1{
     margin-left: 1%;
 }
 
-.perfil__tlf__txt, .perfil__gmail__txt, .perfil__github__txt{
+.perfil__tlf__txt, .perfil__gmail__txt, .perfil__github__txt, .perfil__contact{
     position:absolute;
     margin-left: 3.3%;
+}
+.perfil__contact{
+    margin-top:32.7%;
+    height: 40px;
+    width: 100px;
+    
 }
 .perfil__tlf{
     margin-top: 22%;
@@ -93,7 +107,6 @@ h1{
 .perfil__gmail{
     margin-top: 25%;
 }
-
 .perfil__github{
     margin-top: 28%;
 }
@@ -166,7 +179,6 @@ h1{
     width: 95%;
     margin-top: 10%;
     margin-left:2%;
-
     background-color: var(--fondo1);
 }
 
@@ -269,20 +281,6 @@ h1{
   animation-duration: 1.5s;
 }
 
-@-webkit-keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
-}
-
-@keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
-}
-@keyframes fade_menu {
-    from {background-color: var(--fondo1)}
-    to {background-color: var(--fondo2)}
-  }
-
 .mySlides{
     position: absolute;
     height: 70%;
@@ -300,3 +298,63 @@ h1{
 }
 
 /* Fin slider */
+
+/* Contact */
+.contact-section{
+    position:absolute;
+    z-index: 7;
+    width: 70%;
+    height: 67%;
+    margin-top: 17%;
+    margin-left:22%;
+    margin-right: 0%;
+    background-color:  white;
+}
+.contact__content{
+    display: block;
+    /* height: 70%;*/
+    width: 95%;
+    z-index: 15;
+    position: absolute;
+    margin-top: 10%;
+    margin-left: 2%;
+    background-color: var(--fondo1);
+}
+
+.contact-section h2{
+    margin-left: 45%;
+}
+
+.contact__content__form{
+    margin-left: 10%;
+}
+
+input:focus, select:focus {
+    box-shadow: 5px 5px 5px white;
+}
+.contact__content__form__email{
+    width: 110px;
+    height: 30px;
+}
+
+.contact__back{
+    height: 30px;
+    width: 60px;
+}
+
+/* Fin contact */
+
+
+@-webkit-keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+  
+  @keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+  @keyframes fade_menu {
+      from {background-color: var(--fondo1)}
+      to {background-color: var(--fondo2)}
+  }

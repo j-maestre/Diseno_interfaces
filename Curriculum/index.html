@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html>
     <head>
-        
-        
         <title>Curriculum</title>
         <meta charset="utf-8"/>
         <meta name="copyright" content="Jose Maria Maestre Quiles" /> 
@@ -73,9 +71,11 @@
             <img src="./css/media/wa_icon.png" class="perfil__tlf"><p class="perfil__tlf__txt"> +34 633 57 98 41</p></img>
             <img src="./css/media/gmail_icon.png" class="perfil__gmail"><p class="perfil__gmail__txt"> jmqmaestre@gmail.com</p></img>
             <img src="./css/media/github_icon.png" class="perfil__github"><p class="perfil__github__txt"> j-maestre</p></img>
+            <p class="perfil__contact button" id="contact" onclick="contactMe()">Contact me</p>
         </section>
 
-        <section class="center">
+
+        <section class="center" id="center">
             <section class="center__menu">
                 <p class="center__menu__education dot" onclick="currentSlide(1)">Education</p>  <!-- Añadir clase active para cuando este seleccionado-->
                 <p class="center__menu__work dot" onclick="currentSlide(2)">Work Experience</p>
@@ -99,7 +99,6 @@
                     </div>
                 
                     <div class="mySlides fade">
-                      
                         <h2>Junio-2018 Septiembre-2018 Socorrista</h2><br/>
                         <article>Socorrista Piscina municipal d'Ontinyent</article><br/>
                         <div class="text">Caption Two</div>
@@ -122,91 +121,30 @@
 
                         <div class="text">Caption Three</div>
                     </div>
-                
                     <!-- Next and previous buttons -->
                     <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
                     <a class="next" onclick="plusSlides(1)">&#10095;</a>
                 </div>
-
-                <!-- <div class="puntitos" style="text-align:center">
-                    <span class="dot" onclick="currentSlide(1)"></span>
-                    <span class="dot" onclick="currentSlide(2)"></span>
-                    <span class="dot" onclick="currentSlide(3)"></span>
-                </div> -->
             <br>
-
             </section>
 
         </section>
-
-        
-        
-
-
-
-
-        <!-- <section class="titulaciones">
-            <h2>Titulaciones</h2>
-            <article class="titulaciones__daw">Desarrollo de Aplicaciones Web IES l'Estacio</article>
-        </section> -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        <!-- <header>
-            <h1>Curriculum Xema</h1>
-            <img src="imagen" alt="Foto perfil">
-        </header>
-
-        <section class="datos_personales">
-
-            <h2>Información personal</h2>
-            <h3>Xema Maestre</h3>
-            <dl>
-                <dt><b>Estudios</b></dt>
-                    <dd>Bachiller</dd>
-                    <dd>ESO</dd>
-                    <dd>DAW</dd>
-
-                <dt><b>Experiencia</b></dt>
-                    <dd>Texto de ejemplo</dd>
-                    <dd>Texto de ejemplo</dd>
-            </dl>
+        <section class="contact-section" hidden id="contactSection">
+            <aside class="contact__content">
+                <h2>Contact</h2><br/><br/>
+                <form class="contact__content__form">
+                    <label for="name">Name:</label><br/>
+                    <input type="text" id="name" name="name" placeholder="Your name"><br>
+                    <label for="last_name">Last name:</label><br>
+                    <input type="text" id="last_name" name="last_name" placeholder="Your last name"><br><br>
+                    <label for="email">Email:</label><br>
+                    <input type="text" id="email" name="email" placeholder="Your email"><br><br>
+                    <label for="argument">Argument:</label><br>
+                    <textarea id="argument" name="argument" rows="4" cols="50"></textarea><br><br>
+                    <p class="contact__content__form__email button" onclick="sendEmail()">Send email</p>
+                </form> 
+                <p class="contact__back button" id="back" onclick="contactMe(false)">Back</p>
+            </aside>
         </section>
-
-        <section class="otras_especificaciones">
-            <dl>
-                <dt><b>Quien soy</b></dt>
-                <dd>Texto de ejemplo</dd>
-
-                <dt><b>Idiomas</b></dt>
-                <dd>Ingles</dd>
-                <dd>Valenciano</dd>
-                <dd>Español</dd>
-
-                <dt><b>Referencias</b></dt>
-                <dd>Texto de ejemplo</dd>
-            </dl>
-        </section>
-
-        <footer>
-            <section class="social">
-                <h2>Redes sociales</h2>
-                    <p>Instagram</p>
-                    <p>Facebool</p>
-                    <p>Twitter</p>
-            </section>
-        </footer> -->
     </body>
-    
 </html>

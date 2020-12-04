@@ -5,57 +5,49 @@
   <title>Grid 3</title>
   <style media="screen">
 
-      header{
-          background-color: tomato;
-          top:0;
-          height: 100px;
-          width: 
-          100%;
-      }
-
-      body{
-          display: grid;
-          height: 800px;
-      }
-
-      footer{
-          position: absolute;
-          background-color: red;
-          bottom: 0;
-          width: 100%;
-      }
-
-      .body{
-          display: grid;
-          grid-template-columns: 10% 80% 10%;
-          background-color: green;
-          height: 800px;
-      }
-    
-      .left{
-          background-color: blue;
-      }
-      .right{
-          background-color: rgb(0, 0, 167);
-      }
+    .title   { grid-area: title; }
+    .left    { grid-area: left; }
+    .content { grid-area: content; }
+    .right   { grid-area: right; }
+    .footer  { grid-area: footer; }
 
      
+.container {
+  display: grid;
+  grid-template-areas:
+    'title title title title title title title'
+    'left content content content content content right'
+    'footer footer footer footer footer footer footer';
+  padding: 0;
+}
+.title{
+    background-color: tomato;
+    height: 100px;
+}
+.left{
+    background-color: blue;
+    height: 765px;
+}
+.content{
+    background-color: green;
+}
+.right{
+    background-color: rgb(0, 0, 141);
+}
+.footer{
+    background-color: red;
+    height: 100px;
+}
 
   </style>
 </head>
 <body>
-    <header>
-        <h2>Title</h2>
-    </header>
-    
-    <section class="body">
-        <aside class="left"><h2>Aside left</h2></aside>
-        <h2>Content</h2>
-        <aside class="right"><h2>Aside right</h2></aside>
+    <section class="container page">
+        <div class="title">Title</div>
+        <div class="left">Aside left</div>
+        <div class="content">Content</div>
+        <div class="right">Aside right</div>
+        <div class="footer">Footer</div>
     </section>
-
-    <footer>
-        <h2>Footer</h2>
-    </footer>
 </body>
 </html>

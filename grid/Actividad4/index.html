@@ -8,34 +8,32 @@
           background-color: black;
       }
   
-  .yellow{
+  .yellow, .red{
       display: grid;
       grid-template-columns: 50% 50%;
+      width: 1100px;
   }
 
-  .red{
-      display: grid;
-      grid-template-columns: 50% 50%;
-  }
-  .yellow__box{
-      background-color: yellow;
-      width: 100px;
+  .yellow p, .red p{
+    width: 100px;
       height: 80px;
+  }
+
+  .yellow p{
+      background-color: yellow;
       border-radius: 10px;
       align-items: center;
-  }
-  .red__box{
+  }  
+  .red p{
       background-color: red;
-      width: 100px;
-      height: 80px;
+      
       border-radius: 10px;
   }
 
   .yellow_vertical{
       position: absolute;
       margin-top: -10%;
-      margin-left: 18%;
-      display:grid;
+      margin-left: 14%;
       grid-template-columns: 100%;
       grid-template-rows: 33% 33% 33%;
   }
@@ -43,13 +41,13 @@
       background-color: yellow;
       width: 20px;
       height: 60px;
-      /* border-style: groove; */
       margin-top:-68%;
   }
 
   .cruise p{
-      width: 120px;
-      height: 100px;
+      width: 80px;
+      height: 60px;
+      margin-top: 1px;
   }
 
   .cruise__green{
@@ -64,33 +62,77 @@
 
   .cruise{
       position: absolute;
-      margin-top: -20%;
-      margin-left: 25%;
+      margin-top: -12.4%;
+      margin-left: 17%;
       display: grid;
       grid-template-columns: 100%;
       grid-template-rows: 33% 33% 33%;
-      
   }
 
+  
+  .rectangulo{
+    display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(17, 1fr);
+      background-color: red;
+      border-color: black;
+      grid-gap: 10px;
+  }
+
+  .fondo{
+      position: absolute;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      width: 65px;
+      margin-left: 15%;
+      margin-top: -29%;
+  }
+  .bars p{
+
+      width: 32.5px;
+      height: 9px;
+      background-color: red;
+      justify-self: center;
+      margin-top:1px;
+      margin-bottom: 3px;
+  }
+  .bars{
+      margin:0;
+      padding: 0;
+      margin-inline-start: 1em;
+      margin-inline-end:1em ;
+      margin-inline-start: 0px;
+      margin-inline-end: -5px;
+      width: 45px;
+      height: 200px;
+  }
+
+p {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    text-align: center !important;
+    font-weight: bold;
+}
 
   </style>
 </head>
 <body>
 
     <section class="yellow">
-        <p class="yellow__box">ALT</p>
-        <p class="yellow__box">AUX</p>
-        <p class="yellow__box">OIL PRESS</p>
-        <p class="yellow__box">SAT COMM</p>
+        <p>ALT</p>
+        <p>AUX</p>
+        <p>OIL PRESS</p>
+        <p>SAT COMM</p>
     </section>
 
     <section class="red">
-        <p class="red__box">OIL TEMP</p>
-        <p class="red__box">ACC</p>
-        <p class="red__box">EGT</p>
-        <p class="red__box">RADAR</p>
-        <p class="red__box">FUEL</p>
-        <p class="red__box">MP1</p>
+        <p>OIL TEMP</p>
+        <p>ACC</p>
+        <p>EGT</p>
+        <p>RADAR</p>
+        <p>FUEL</p>
+        <p>MP1</p>
     </section>
 
     <section class="yellow_vertical">
@@ -100,9 +142,68 @@
     </section>
 
     <section class="cruise">
-        <p class="cruise__green"></p>
-        <p class="cruise__yellow"></p>
-        <p class="cruise__red"></p>
+        <p class="cruise__green">NORMAL CRUISE</p>
+        <p class="cruise__yellow">AUTO CRUISE</p>
+        <p class="cruise__red">PURSUIT</p>
+    </section>
+    <section class="fondo">
+        <div class="bars">
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+        </div>
+        <div class="bars">
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+        </div>
+        <div class="bars">
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+        </div>
     </section>
 
 

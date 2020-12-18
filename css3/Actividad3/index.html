@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS3</title>
+  <style media="screen">
+
+    :root{
+        --selected:gold;
+    }
+
+  .menu{
+      display: grid;
+      grid-template-columns: 6em 6em 6em;
+  }
+
+  .menu a{
+      text-decoration: none;
+  }
+
+  .intro h2{
+    width: 135px;
+  }
+  .result h2{
+      width: 115px;
+  }
+
+  .conclusion h2{
+      width: 120px;
+  }
+
+  h2:target{
+      background-color:var(--selected);
+  }
+  </style>
+</head>
+<body>
+    <header>
+        <section class="menu">
+            <a href="#intro">Introduccion |</a>
+            <a href="#result">Resultados |</a>
+            <a href="#conclusion">Conclusión</a>
+        </section>
+    </header>
+
+    <section class="content">
+        <div class="intro">
+            <h2 id="intro">Introducción</h2>
+            <p>Maecenas sed...</p>
+            <p>...</p>
+        </div>
+        <div name="result" class="result">
+            <h2 id="result">Resultados</h2>
+            <p>Vivamus sagiti lacus...</p>
+            <p>...</p>
+        </div>
+        <div name="conclusion" class="conclusion">
+            <h2 id="conclusion">Conclusion</h2>
+            <p>Donec ullamcorper nulla...</p>
+        </div>
+    </section>
+    
+</body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+</html>

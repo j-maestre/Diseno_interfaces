@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS3</title>
+  <style media="screen">
+
+    /* Common */
+    :root{
+        --link:blue;
+        --icon_user: url('./img/icon.png');
+        --icon_pdf: url("./img/pdf.png");
+        --icon_zip: url('./img/zip.png');
+
+    }
+    .part2 a:nth-child(n)::before, .part2 a:nth-child(5n)::before,.part1 a[href^="mailto"]::before{
+        content: '';
+        background-repeat: no-repeat;
+        background-position: left;
+        width: 25px;
+        height: 25px;
+        display: inline-block;
+    }
+
+    .part1, .part2{
+        display: block;
+        border-width: 2px;
+        border-style: solid;
+        border-color: black;
+        margin-bottom: 10px;
+    }
+    .part1 *, .part2 *{
+        position: relative;
+        margin-left: 10px;
+        margin-top: 10px;
+    }
+    a{
+        text-decoration: none;
+        color:var(--link);
+    }
+
+
+    /* Excercise 1 */
+  
+  body {
+        font: .8em Verdana, Arial, Helvetica, sans-serif;
+    }
+    
+
+    .part1 a[href^="mailto"]::before{    
+        background-image: var(--icon_user);
+    }
+
+    .part1{
+        width: 500px;
+        height: 200px;
+
+    }
+    
+   .part1 h1{
+        top:20px;
+    }
+
+    /* End excercise 1 */
+
+    /* Excercise 2 */
+
+
+    .part2{
+        width: 500px;
+        height: 200px;
+    }
+    .part2 a:nth-child(n){
+        font-style: italic;
+        margin-left: 10px;
+    } 
+
+    .part2 a:nth-child(n)::before{
+        background-image: var(--icon_pdf);
+
+    }   
+
+    .part2 a:nth-child(5n)::before{
+        background-image: var(--icon_zip);
+
+    }
+
+    .part2 a:nth-child(5n){
+        font-weight: bold;
+        font-style: normal;
+    }
+
+   
+    /* End excercise 2 */
+
+
+
+  </style>
+</head>
+<body>
+    <section class="part1">
+        <h1>Los interlocutores a su servicio</h1><br/><br/>
+        <a href="mailto:jserrano@gmail.com">Javier SERRANO VEGA: Director comercial</a><br/><br/>
+        <a href="mailto:jserrano@gmail.com">Victoria ESPERANZA CASTILLO: Jefe de ventas</a><br/><br/>
+        
+        <p>Para las reclamaciones, vaya a <a href="#">Problemas con el pedido</a></p>
+    </section>
+
+    <section class="part2">
+        <span>Descargue nuestros archivos:</span><br/><br/>
+
+        <a href="#">El folleto de presentacion(PDF)</a><br/>
+        <a href="#">Los nuevos productos(PDF)</a><br/>
+        <a href="#">Las ofertas promocionales(PDF)</a><br/>
+        <a href="#">Todos nuestros documentos(.zip)</a>
+    </section>
+    
+</body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+</html>

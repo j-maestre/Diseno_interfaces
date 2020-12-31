@@ -4,6 +4,9 @@
   <meta charset="UTF-8">
   <title>CSS3</title>
   <style media="screen">
+      :root{
+        --important:gold;
+    }
       ul{
           display: inline-block;
           border-color: black;
@@ -16,13 +19,13 @@
       }
 
       ul:nth-child(1) li:nth-child(2){
-          background-color: gold;
+          background-color: var(--important);
       }
       ul:nth-child(2) li:nth-child(odd){
-          background-color: gold;
+          background-color: var(--important);
       }
       ul:nth-child(3) li:nth-child(3n){
-          background-color: gold;
+          background-color: var(--important);
       }
 
       

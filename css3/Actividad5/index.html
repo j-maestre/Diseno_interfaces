@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document CSS3</title>
+  <style media="screen">
+
+    :root{
+        --childBorder:#ffaa00;
+        --parentBorder:#7f7f7f;
+        --borderSize:5px;
+    }
+
+  .divContainer {
+    width:500px;
+    border:var(--borderSize) solid var(--parentBorder);
+    margin: 10px;
+  }
+  .divBox{
+    width:250px;
+    border:5px solid var(--childBorder);
+    padding:20px;
+    float:left;
+  }
+
+  .divBoxLeft, .divBoxRight{
+    box-sizing: border-box;
+    width: 50%;
+    border:var(--borderSize) solid var(--childBorder);
+    padding:20px;
+    float:left;
+  } 
+
+  </style>
+</head>
+<body>
+    <div class="divContainer">
+        <div class="divBoxLeft">Div is positioned on the left.</div>
+        <div class="divBoxRight">Div is positioned on the right.</div>
+    <div style="clear:both;"></div>
+    </div>
+  <div class="divContainer">
+    <div class="divBox">Div is positioned on the left.</div>
+    <div class="divBox">Div is positioned on the right.</div>
+  <div style="clear:both;"></div>
+  </div>
+
+</body>
+</html>

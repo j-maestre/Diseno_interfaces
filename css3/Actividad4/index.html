@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS3</title>
+  <style media="screen">
+      ul{
+          display: inline-block;
+          border-color: black;
+          border-width: 2px;
+          border-style: solid;
+          width: 200px;
+      }
+      ul li{
+          padding: 10px;
+      }
+
+      ul:nth-child(1) li:nth-child(2){
+          background-color: gold;
+      }
+      ul:nth-child(2) li:nth-child(odd){
+          background-color: gold;
+      }
+      ul:nth-child(3) li:nth-child(3n){
+          background-color: gold;
+      }
+
+      
+  
+  </style>
+</head>
+<body>
+
+    <ul>
+        <li>Rojo</li>
+        <li>Verde</li>
+        <li>Azul</li>
+        <li>Gris</li>
+        <li>Violeta</li>
+        <li>Amarillo</li>
+        <li>Negro</li> 
+    </ul>
+    <ul>
+        <li>Rojo</li>
+        <li>Verde</li>
+        <li>Azul</li>
+        <li>Gris</li>
+        <li>Violeta</li>
+        <li>Amarillo</li>
+        <li>Negro</li> 
+    </ul>
+    <ul>
+        <li>Rojo</li>
+        <li>Verde</li>
+        <li>Azul</li>
+        <li>Gris</li>
+        <li>Violeta</li>
+        <li>Amarillo</li>
+        <li>Negro</li> 
+    </ul>
+</body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+</html>

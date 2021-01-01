@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document CSS3</title>
+  <style media="screen">
+
+    :root{
+        --pista:   url("img/pista.jpg");
+        --pelota:  url("img/pelota.png");
+        --raqueta: url("img/raqueta.png");
+        --rafa:    url("img/rafa.png");
+        --fondo:rgb(133, 199, 174);
+    }
+
+    .container{
+        background-color: var(--fondo);
+        background-image:var(--pista), var(--raqueta), var(--raqueta), var(--pelota), var(--rafa);
+        background-position: center bottom, left bottom, right bottom, center 360px, center top;
+        background-repeat: no-repeat, no-repeat, no-repeat,no-repeat, repeat;
+        width: 1500px;
+        height: 800px;
+    }
+
+  </style>
+</head>
+<body>
+    <div class="container"></div>
+
+</body>
+</html>

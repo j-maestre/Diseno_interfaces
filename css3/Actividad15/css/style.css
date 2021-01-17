@@ -1,0 +1,129 @@
+ul{
+    display: flex;
+    flex-wrap: wrap;
+}
+img{
+    width: 300px;
+    height: 300px;
+    margin: 20px;
+}
+ul li:nth-child(1){
+    filter: blur(5px);
+}
+ul li:nth-child(2){
+    filter: contrast(200%);
+}
+
+ul li:nth-child(3){
+    filter: drop-shadow(16px 16px 20px blue) contrast(200%);
+}
+
+ul li:nth-child(4){
+    filter: brightness(0.7) saturate(150%) contrast(190%) hue-rotate(30deg);
+}
+
+ul li:nth-child(5){
+    filter: invert(90%) hue-rotate(175deg);
+}
+
+ul li:nth-child(6){
+    animation: saturated 3s infinite;
+}
+
+ul li:nth-child(7):hover{
+    animation: desaparece 3s infinite;
+}
+
+ul li:nth-child(8){
+    animation: calor 5s infinite;
+}
+
+ul li:nth-child(9){
+    width: 30px ;
+    height: 30px ;
+    animation: tamano 3s infinite;
+}
+
+ul li:nth-child(10){
+    animation: blur 3s infinite;
+}
+
+@keyframes blur{
+
+    0%{
+        filter:blur(0px);
+    }
+
+    50%{
+        filter:blur(5px)  drop-shadow(16px 16px 20px rgb(0, 0, 0));
+    }
+
+    100%{
+        filter:blur(0px);
+    }
+}
+
+
+
+@keyframes saturated {
+    from {filter:saturate(0%);}
+    to {filter:saturate(300%) drop-shadow(16px 16px 20px orange);}
+}
+
+@keyframes desaparece {
+    from{filter:opacity(1)}
+    to{filter: opacity(0);}
+    
+}
+
+@keyframes tamano{
+    0%{
+        width: 30px;
+        height: 30px;
+    }
+
+    50%{
+        width: 300px;
+        height: 300px;
+    }
+
+    100%{
+        width: 30px;
+        height: 30px;
+    }
+}
+
+@keyframes calor {
+    0% {
+      filter: sepia(0) saturate(2);
+    }
+  
+    50% {
+      filter: sepia(1) saturate(8);
+    }
+  
+    100% {
+      filter: sepia(0) saturate(2);
+    }
+}
+ 
+  p{
+      position: absolute;
+      margin-left: 10%;
+      margin-top:-12%;
+      margin-left: 24%;
+      background-color: orange;
+      width: 170px;
+      height: 20px;
+      z-index: -5;
+  }
+
+  div{
+    position: absolute;
+    margin-left: 10%;
+    margin-top:0%;
+    margin-left: 25%;
+    width: 70px;
+    height: 20px;
+    background-color: rgba(255, 166, 0, 0.479);
+  }

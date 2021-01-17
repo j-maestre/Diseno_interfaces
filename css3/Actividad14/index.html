@@ -8,7 +8,9 @@
     :root{
       --estrella:url('./img/estrella.svg');
       --cruz:url('./img/cruz.svg');
-      --huella:url('./img/huella.svg')
+      --huella:url('./img/huella.svg');
+      --android:url('./img/android.svg');
+      --asterisk:url('./img/asterisk.svg');
     }
 
 
@@ -17,39 +19,56 @@
     margin:30px;
   }
 .mascara-0{
+  -webkit-mask-image: var(--android);
+  mask-image: var(--android);
+  -webkit-mask-position: 50% 100%;
+  mask-position: 50% 100%;
  
 }
 .mascara-1{
+  -webkit-mask-image: var(--huella);
+  mask-image: var(--huella);
+  -webkit-mask-repeat: repeat-x;
+  mask-repeat: repeat-x;
+  -webkit-mask-size:20%;
+  mask-size: 20%;
+}
+.mascara-2{
   -webkit-mask-image: var(--estrella);
   mask-image: var(--estrella);
   -webkit-mask-repeat: repeat;
   mask-repeat: repeat;
-}
-.mascara-2{
-  -webkit-mask-image: url('./estrella.svg');
-  mask-image: url('./estrella.svg');
-  -webkit-mask-repeat: repeat;
-  mask-repeat: repeat;
  }
 .mascara-3{
+  -webkit-mask-image: var(--estrella);
+  mask-image: var(--estrella);
+  -webkit-mask-size:40%;
+  mask-size: 40%;
+  -webkit-mask-repeat: repeat-y;
+  mask-repeat: repeat-y;
 }
 .mascara-4{
+  -webkit-mask-image: var(--asterisk);
+  mask-image: var(--asterisk);
+  -webkit-mask-size:10%;
+  mask-size: 10%;
+  -webkit-mask-repeat: repeat;
+  mask-repeat: repeat;
 }
 </style>
 </head>
 <body>
   <div>
-    holaaaaaaaaaa
   <figure>
-  <img class="mascara-1" src="http://diw.jomuoru.xyz/images/clip-demo.jpg" alt="DIW" width="300"><figcaption><strong>mask-*?</strong></figcaption>
+  <img class="mascara-0" src="http://diw.jomuoru.xyz/images/clip-demo.jpg" alt="DIW" width="300"><figcaption><strong>mask-*?</strong></figcaption>
     </figure>
  </div>
 <div>
-  <img class="mascara-2" src="http://diw.jomuoru.xyz/images/clip-demo.jpg" alt="DIW" width=300>
+  <img class="mascara-1" src="http://diw.jomuoru.xyz/images/clip-demo.jpg" alt="DIW" width=300>
   <figcaption><strong>mask-*?</strong></figcaption>
 </div>
 <div>
-  <img class="mascara-0" src="http://diw.jomuoru.xyz/images/clip-demo.jpg" alt="DIW" width=300>
+  <img class="mascara-2" src="http://diw.jomuoru.xyz/images/clip-demo.jpg" alt="DIW" width=300>
   <figcaption><strong>mask-*?</strong></figcaption>
 </div>
 <div>

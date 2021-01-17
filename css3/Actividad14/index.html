@@ -8,6 +8,7 @@
     :root{
       --estrella:url('./estrella.svg');
       --cruz:url('./cruz.svg');
+      --huella:url('./huella.svg')
     }
 
 
@@ -21,8 +22,14 @@
 .mascara-1{
   -webkit-mask: var(--estrella);
   mask: var(--estrella);
+  -webkit-mask-repeat: repeat;
+  mask-repeat: repeat;
 }
 .mascara-2{
+  -webkit-mask: url('./estrella.svg');
+  mask: url('./estrella.svg');
+  -webkit-mask-repeat: repeat;
+  mask-repeat: repeat;
  }
 .mascara-3{
 }

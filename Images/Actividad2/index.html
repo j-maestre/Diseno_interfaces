@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Images optimizacion</title>
+</head>
+<body>
+
+   <h2>Imagen 1</h2>
+   <p>Haz la pantalla mas pequeña para ver la imagen optimizada</p>
+
+   <picture>
+
+    <!-- Aqui sin optimizar -->
+    <source media="(min-width:650px)" srcset="./img/im.03-a.png">
+
+    <!-- Esta optimizada mas pequeña -->
+
+
+    <!-- <img src="/scripts/timthumb.php?src=./img/im.03-a.png&h=150&w=150&zc=1" alt="thumb" > -->
+    <source media="(min-width:465px)" srcset="/scripts/timthumb.php?src=./img/im.03-a.png&h=150&w=150&zc=1">
+
+
+    <img src="img_orange_flowers.jpg" alt="Flowers" style="width:auto;">
+   </picture>
+
+</body>
+</html>

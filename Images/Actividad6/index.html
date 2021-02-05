@@ -6,8 +6,8 @@
   <style>
 
     :root {
-      --stroke: rgba(0, 255, 98, 0.747);
-      --background: rgba(255, 196, 0, 0.377);
+      --stroke: rgb(0, 255, 98);
+      --background: rgba(0, 255, 255, 0.137);
       --translation-x: 400px;
       --translation-y: -400px;
     }
@@ -17,13 +17,16 @@
         stroke-width: 10;
         stroke: var(--stroke);
         stroke-dasharray: 400;
-        /* -webkit-transition: all .6s; */
+        -webkit-transition: all .6s;
         transition: transform .9s;
         transition-timing-function: linear;
+        
     }
 
     svg{
         background-color: var(--background);
+        box-shadow: 0px 0px 43px -4px rgba(0, 91, 247, 0.589);
+        -webkit-box-shadow: 0px 0px 43px -4px rgba(0, 91, 247, 0.589);
     }
 
     svg:hover .top{
@@ -50,13 +53,13 @@
 </head>
 <body>
 
+<p> Hover me!</p>
 
-<div class="container"> Hover me!</div>
 <svg width="400" height="400">
-    <line class="top" x1="0" y1="0" x2="1200" y2="0" />
+    <line class="top" x1="0" y1="0" x2="400" y2="0" />
     <line class="left" x1="0" y1="400" x2="0" y2="-800" />
-    <line class="bottom" x1="400" y1="400" x2="-800" y2="400" />
-    <line class="right" x1="400" y1="0" x2="400" y2="1200" />
+    <line class="bottom" x1="400" y1="400" x2="-200" y2="400" />
+    <line class="right" x1="400" y1="0" x2="400" y2="400" />
 </svg>
 
 </body>

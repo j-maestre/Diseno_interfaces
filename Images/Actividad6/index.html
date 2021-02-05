@@ -4,37 +4,45 @@
   <meta charset="UTF-8">
   <title>Images SVG</title>
   <style>
-      svg line {
-            stroke-width: 10;
-            stroke: rgba(0, 255, 98, 0.747);
-            fill: none;
-            stroke-dasharray: 400;
-            /* -webkit-transition: all .6s; */
-            transition: transform .9s;
-            transition-timing-function: linear;
-        }
+
+    :root {
+      --stroke: rgba(0, 255, 98, 0.747);
+      --background: rgba(255, 196, 0, 0.377);
+      --translation-x: 400px;
+      --translation-y: -400px;
+    }
+
+
+    svg line {
+        stroke-width: 10;
+        stroke: var(--stroke);
+        stroke-dasharray: 400;
+        /* -webkit-transition: all .6s; */
+        transition: transform .9s;
+        transition-timing-function: linear;
+    }
 
     svg{
-        background-color: rgba(255, 196, 0, 0.377);
+        background-color: var(--background);
     }
 
     svg:hover .top{
-        transform: translateX(400px);
+        transform: translateX(var(--translation-x));
     }
 
     svg:hover .right{
         transition-delay: 0.9s;
-        transform: translateY(400px);
+        transform: translateY(var(--translation-x));
     }
 
     svg:hover .bottom{
         transition-delay: 1.8s;
-        transform: translateX(-400px);
+        transform: translateX(var(--translation-y));
     }
 
     svg:hover .left{
         transition-delay: 2.7s;
-        transform: translateY(-400px);
+        transform: translateY(var(--translation-y));
     }
 
 

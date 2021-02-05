@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Images SVG</title>
+  <style>
+    .horizontal{
+        position: absolute;
+        height: 352px;
+    }
+
+    .vertical{
+        position: absolute;
+        width: 575px;
+    }
+
+    .container{
+        display: flex;
+        /* flex-flow: row nowrap; */
+        /* align-content: center; */
+        position: absolute;
+        margin:30%;
+        display: block;
+        background-color: burlywood;
+        width: 200px;
+        height: 200px;
+        margin-left: 403px;
+        margin-top: 402px;
+    }
+
+    .up{
+        margin-top: 227px;
+        margin-left: 283px;
+        animation: mover 2s linear;
+    }
+
+    .butom{
+        margin-top: 474px;
+        margin-left: 283px;
+    }
+
+    .right{
+        margin-top: 289px;
+        margin-left: 369px;
+    }
+    .left{
+        margin-top: 289px;
+        margin-left: 112px;
+    }
+
+
+    @keyframes mover {
+        
+    }
+</style>
+</head>
+<body>
+
+<img src="media/lineaH.svg" class = "horizontal up"/>
+<img src="media/lineaV.svg" class = "vertical right"/>
+
+<img src="media/lineaH.svg" class = "horizontal butom"/>
+<img src="media/lineaV.svg" class = "vertical left"/>
+<div class="container"> Hover me!</div>
+
+
+</body>
+</html>

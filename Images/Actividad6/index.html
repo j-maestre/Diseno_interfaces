@@ -4,65 +4,52 @@
   <meta charset="UTF-8">
   <title>Images SVG</title>
   <style>
-    .horizontal{
-        position: absolute;
-        height: 352px;
+      svg line {
+            stroke-width: 10;
+            stroke: rgba(0, 255, 98, 0.747);
+            fill: none;
+            stroke-dasharray: 400;
+            /* -webkit-transition: all .6s; */
+            transition: transform .9s;
+            transition-timing-function: linear;
+        }
+
+    svg{
+        background-color: rgba(255, 196, 0, 0.377);
     }
 
-    .vertical{
-        position: absolute;
-        width: 575px;
+    svg:hover .top{
+        transform: translateX(400px);
     }
 
-    .container{
-        display: flex;
-        /* flex-flow: row nowrap; */
-        /* align-content: center; */
-        position: absolute;
-        margin:30%;
-        display: block;
-        background-color: burlywood;
-        width: 200px;
-        height: 200px;
-        margin-left: 403px;
-        margin-top: 402px;
+    svg:hover .right{
+        transition-delay: 0.9s;
+        transform: translateY(400px);
     }
 
-    .up{
-        margin-top: 227px;
-        margin-left: 283px;
-        animation: mover 2s linear;
+    svg:hover .bottom{
+        transition-delay: 1.8s;
+        transform: translateX(-400px);
     }
 
-    .butom{
-        margin-top: 474px;
-        margin-left: 283px;
-    }
-
-    .right{
-        margin-top: 289px;
-        margin-left: 369px;
-    }
-    .left{
-        margin-top: 289px;
-        margin-left: 112px;
+    svg:hover .left{
+        transition-delay: 2.7s;
+        transform: translateY(-400px);
     }
 
 
-    @keyframes mover {
-        
-    }
 </style>
 </head>
 <body>
 
-<img src="media/lineaH.svg" class = "horizontal up"/>
-<img src="media/lineaV.svg" class = "vertical right"/>
 
-<img src="media/lineaH.svg" class = "horizontal butom"/>
-<img src="media/lineaV.svg" class = "vertical left"/>
 <div class="container"> Hover me!</div>
-
+<svg width="400" height="400">
+    <line class="top" x1="0" y1="0" x2="1200" y2="0" />
+    <line class="left" x1="0" y1="400" x2="0" y2="-800" />
+    <line class="bottom" x1="400" y1="400" x2="-800" y2="400" />
+    <line class="right" x1="400" y1="0" x2="400" y2="1200" />
+</svg>
 
 </body>
 </html>

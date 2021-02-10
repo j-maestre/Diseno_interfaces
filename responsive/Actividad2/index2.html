@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Responsive2</title>
+    <style>
+        .container{
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .box{
+            min-height: 200px;
+            width: 100%;
+            height: auto;
+        }
+        .azul{
+            background-color: rgb(0, 116, 248);
+        }
+        .azul_oscuro{
+            background-color: rgb(3, 0, 161);
+        }
+        .verde{
+            background-color: chartreuse;
+        }
+        .rojo{
+            background-color: tomato;
+        }
+
+        @media screen and (min-width: 500px){
+            .azul_oscuro{
+                width: 50%;
+            }
+            #container2{
+                width: 50%;
+            }
+        }
+
+        @media screen and (min-width: 600px){
+            .azul_oscuro{
+                width: 25%;
+                order: 1;
+            }
+
+            #container2{
+                width: 50%;
+            }
+            .rojo{
+                width: 25%;
+                order: -1;
+            }
+        }
+      
+        
+    </style>
+  </head>
+  <body>
+    <div class="container">
+        <div class="box azul_oscuro"></div>
+        <div class="container" id="container2">
+            <div class="box azul"></div>
+            <div class="box verde"></div>
+        </div>
+        <div class="box rojo"></div>
+    </div>
+  </body>
+</html>

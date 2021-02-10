@@ -1,0 +1,117 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+:root{
+  --margin:40%;
+  --padding: 10px;
+}
+
+body {
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+}
+
+.navbar { 
+  font-size: 18px;
+  background-image: linear-gradient(260deg, #2376ae 0%, #c16ecf 100%);
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  padding-bottom: var(--padding);
+  display: flex;
+}
+.logo{
+  flex:1;
+}
+
+.main-nav {
+  margin-right: var(--margin);
+}
+ul li{
+  list-style-type: none;
+}
+.nav-links,
+.logo {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.main-nav li {
+  text-align: center;
+  margin: 15px;
+}
+
+.logo {
+  display: inline-block;
+  font-size: 22px;
+  margin-top: 10px;
+  margin-left: 20px;
+}
+
+.navbar-toggle {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 24px;
+}
+
+#chkToggle {
+  display: none;
+}
+
+#chkToggle:checked + ul.main-nav {
+  display: block;
+  visibility: visible;
+}
+
+main{
+display: flex;
+}
+aside{
+  padding: var(--padding);
+}
+
+h3{ 
+  padding: var(--padding);
+}
+aside h3{
+  display: block;
+}
+
+img{
+  display: none;
+}
+
+.main-nav{
+  display: none;
+}
+
+.logo:hover,
+  .nav-links:hover {
+    color: rgba(255, 255, 255, 1);
+  }
+
+
+@media screen and (min-width: 750px){  /* Para cuando la pantalla mide mas de 750*/
+  .navbar-toggle {
+    display: none;
+   }
+
+   .main-nav{
+    display: flex;
+    flex-flow:row wrap;
+    justify-content: flex-end;
+    margin: 1px;
+   }
+
+   aside h3{
+    display: none;
+  }
+  img{
+    display: block;
+    margin-left: var(--margin);
+
+  }
+ 
+}

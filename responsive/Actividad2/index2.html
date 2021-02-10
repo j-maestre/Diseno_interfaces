@@ -4,14 +4,20 @@
     <meta charset="utf-8" />
     <title>Responsive2</title>
     <style>
+        :root{
+            --height: 200px;
+            --width: 100%;
+            --breakpoint1: 500px;
+            --breakpoint2: 600px;
+        }
         .container{
-            width: 100%;
+            width: var(--width);
             display: flex;
             flex-wrap: wrap;
         }
         .box{
-            min-height: 200px;
-            width: 100%;
+            min-height: var(--height);
+            width: var(--width);
             height: auto;
         }
         .azul{
@@ -27,7 +33,7 @@
             background-color: tomato;
         }
 
-        @media screen and (min-width: 500px){
+        @media screen and (min-width: 500px){  /*var(--breakpoint1)   no funciona en un @media*/
             .azul_oscuro{
                 width: 50%;
             }

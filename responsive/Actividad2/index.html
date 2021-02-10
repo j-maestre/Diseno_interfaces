@@ -7,6 +7,7 @@
 
         :root{
             --height: 200px;
+            --width: 100%;
             --breakpoint1: 450px;
             --breakpoint2: 550px;
         }
@@ -16,7 +17,7 @@
             flex-wrap: wrap;
         }
         .box{
-            width: 100%;
+            width: var(--width);
             height: var(--height);
         }
         .uno{
@@ -29,7 +30,7 @@
             background-color: deeppink;
         }
 
-        @media screen and (min-width: var(--breakpoint1)){
+        @media screen and (min-width: 450px){
             .uno{
                 width: 25%;
             }
@@ -37,7 +38,7 @@
                 width: 75%;
             }
         }
-        @media screen and (min-width: var(--breakpoint2)){
+        @media screen and (min-width: 550px){
             .uno, .tres{
                 width: 25%;
             }

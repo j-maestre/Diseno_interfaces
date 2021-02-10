@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Responsive2</title>
+    <style>
+        .container{
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .box{
+            width: 100%;
+            height: 200px;
+        }
+        .uno{
+            background-color: aqua;
+        }
+        .dos{
+            background-color: chartreuse;
+        }
+        .tres{
+            background-color: deeppink;
+        }
+
+        @media screen and (min-width: 450px){
+            .uno{
+                width: 25%;
+            }
+            .dos{
+                width: 75%;
+            }
+        }
+        @media screen and (min-width: 550px){
+            .uno, .tres{
+                width: 25%;
+            }
+            .dos{
+                width: 50%;
+            }
+        }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+        <p class="box uno"></p>
+        <p class="box dos"></p>
+        <p class="box tres"></p>
+    </div>
+  </body>
+</html>

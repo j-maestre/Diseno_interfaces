@@ -1,1 +1,87 @@
-@import screen.scss
+header{
+  padding: 12px 30px;
+  font-size: 1.8em;
+  // @include text-background-color;
+  // No llamo al mixin porque no concuerda con la imagen de ejemplo del moodle
+  color: #444;
+  background-color: #eee;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px #aaa;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+li.categoria {
+    float: left;
+  }
+
+  li.categoria > a {
+      @include transition(padding, 0.4s, ease-out)
+  }
+  li.categoria:hover > a {
+    padding: 10px 20px;
+  }
+  li.categoria:hover ul.submenu {
+    height: 100px;
+  }
+
+  ul.submenu {
+    @include transition(height, 0.5s, ease-out);
+    position: absolute;
+    height: 0px;
+    overflow: hidden;
+  }
+
+  footer {
+    @include text-background-color;
+    @include box-sizing(border-box);
+    position: absolute;
+    width: 100%;
+    bottom: 0px;
+    padding: 5px;
+  }
+
+  nav a:hover {
+      @include text-background-color-hover;
+    @include animation(iluminar,0.4s);
+  }
+
+  nav a {
+      @include text-background-color;
+      text-decoration: none;
+      width: 160px;
+      padding: 7px 20px;
+      display: block;
+      text-align: center;
+      cursor: pointer;
+  }
+
+
+  nav {
+    position: absolute;
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  nav ul {
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+  }
+  nav > ul {
+    width: 100%;
+    height: 32px;
+    @include text-background-color;
+  }
+
+  body {
+    padding: 0px;
+    margin: 0px;
+  }
+
+  @keyframes iluminar {
+    from {
+        @include text-background-color;
+    }
+    to {
+        @include text-background-color-hover;
+    }
+  }

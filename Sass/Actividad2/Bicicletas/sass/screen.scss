@@ -22,10 +22,17 @@ $list-background-hover:#888;
     transition-property: $property;
     transition-duration: $duration;
     transition-timing-function:$timing;
+    -moz-transition: $property $duration $timing;
+    -webkit-transition: $property $duration $timing;
 }
 
 @mixin animation($name,$duration, $timing:linear){
     animation-name: $name;
     animation-duration: $duration;
     animation-timing-function: $timing;
+    -moz-animation: $name $duration $timing;
+    -webkit-animation: $name $duration $timing;
 }
+
+
+@import "_menu";

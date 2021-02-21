@@ -1,0 +1,44 @@
+
+@mixin text-background-color{
+    color: $text-color;
+    background-color: $background-color;
+}
+
+@mixin text-background-color-hover{
+    color:$text-color-hover;
+    background-color: $list-background-hover;
+}
+
+@mixin box-sizing($num){
+    box-sizing: $num;
+}
+
+@mixin transition($property, $duration, $timing:linear){
+    transition-property: $property;
+    transition-duration: $duration;
+    transition-timing-function:$timing;
+    -moz-transition: $property $duration $timing;
+    -webkit-transition: $property $duration $timing;
+}
+
+@mixin animation($name,$duration, $timing:linear){
+    animation-name: $name;
+    animation-duration: $duration;
+    animation-timing-function: $timing;
+    -moz-animation: $name $duration $timing;
+    -webkit-animation: $name $duration $timing;
+}
+
+@mixin responsive($size){
+    @if $size==medium{ //max 1024px
+        @media screen and (max-witdh:1024px){
+            
+        }
+
+    }
+
+    @if $size==small{ //max 800px
+        float: none;
+        width: 100%;
+    }
+}

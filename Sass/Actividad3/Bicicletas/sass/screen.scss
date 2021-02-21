@@ -1,0 +1,47 @@
+$text-color: #eee;
+$text-color-hover:lighten($text-color, 10%);
+$background-color:#15a;
+$list-background-hover:lighten($background-color, 10%);
+$title-color: darken($background-color,10%);
+
+@keyframes iluminar {
+    from {
+      background-color: #15a;
+      color: #eee;
+    }
+    to {
+      background-color: #166cd8;
+      color: white;
+    }
+  }
+
+  body {
+    padding: 0px;
+    margin: 0px;
+  }
+
+  header {
+    padding: 12px 30px;
+    font-size: 1.8em;
+    color: #444;
+    background-color: #eee;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px #aaa;
+    font-family: Georgia, "Times New Roman", Times, serif;
+  }
+  
+  footer {
+    color: #eee;
+    background-color: #15a;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    position: fixed;
+    width: 100%;
+    bottom: 0px;
+    padding: 5px;
+  }
+
+@import "mixins";
+@import "contenido";
+@import "_menu";

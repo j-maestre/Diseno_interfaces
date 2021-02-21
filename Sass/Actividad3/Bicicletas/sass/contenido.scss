@@ -1,0 +1,53 @@
+%button-block{
+    box-sizing: border-box;
+    width: 100%;
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 1px solid transparent;
+    cursor: pointer;
+}
+
+%input-block {
+    box-sizing: border-box;
+    width: 100%;
+    border-radius: 5px;
+    padding: 5px 10px;
+    border: 1px solid #bbb;
+}
+
+#contenido{
+    padding: 30px 20px;
+    .col-left{
+        box-sizing: border-box;
+        width: 30%;
+        float: left;
+        padding: 10px;
+        @include responsive("small");
+        input{
+            @extend %input-block;
+        }
+    }
+
+    .col-right{
+        box-sizing: border-box;
+        margin-left: 30%;
+        width: 70%;
+        padding: 10px;
+        h1{
+            color: $title-color;
+            // font-size: 1.6em;
+        }
+    }
+
+    .button-action{
+        @include text-background-color;
+        @extend %button-block;
+        // background-color: $background-color;
+        // color: white;
+
+    }
+    .button-action:hover{
+        background-color: lighten($background-color, 20%);
+    }
+}
+

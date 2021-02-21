@@ -17,25 +17,36 @@
 
 #contenido{
     padding: 30px 20px;
+    @include responsive("medium") {
+        padding: 10px 20px;
+      }
     .col-left{
-        box-sizing: border-box;
+        @include box-sizing(border-box);
         width: 30%;
         float: left;
         padding: 10px;
-        @include responsive("small");
-        input{
+        .login{
             @extend %input-block;
         }
+        @include responsive("medium") {
+            float: none;
+            width: 100%;
+          }
+      
     }
 
     .col-right{
-        box-sizing: border-box;
+        @include box-sizing(border-box);
         margin-left: 30%;
         width: 70%;
         padding: 10px;
         h1{
             color: $title-color;
             // font-size: 1.6em;
+        }
+        @include responsive("small") {
+            margin-left: 0;
+            width: 100%;
         }
     }
 

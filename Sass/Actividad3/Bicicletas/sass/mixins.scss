@@ -30,15 +30,18 @@
 }
 
 @mixin responsive($size){
-    @if $size==medium{ //max 1024px
-        @media screen and (max-witdh:1024px){
-            
+    @if $size == medium{ //max 1024px
+        @media (max-width : 1024px){
+            @content;
         }
 
     }
 
-    @if $size==small{ //max 800px
-        float: none;
-        width: 100%;
+    @if $size == small{ //max 800px
+        @media (max-width: 800px) {
+            @content;
+        // float: none;
+        // width: 100%;
+        }
     }
 }

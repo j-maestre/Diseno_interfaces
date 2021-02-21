@@ -1,0 +1,29 @@
+$text-color: #eee;
+$text-color-hover:lighten($text-color, 10%);
+$background-color:#15a;
+$list-background-hover:lighten($background-color, 10%);
+$title-color: darken($background-color,10%);
+$theme: "light";
+
+@if $theme == "dark"{
+  $background-color: #138;
+}
+@else if $theme == "light"{
+  $background-color: #ddf;
+  $text-color: #138;
+}
+
+@keyframes iluminar {
+    from {
+      background-color: #15a;
+      color: #eee;
+    }
+    to {
+      background-color: #166cd8;
+      color: white;
+    }
+  }
+
+@import "mixins";
+@import "contenido";
+@import "_menu";

@@ -1,0 +1,64 @@
+
+@mixin text-background-color{
+    color: $text-color;
+    background-color: $background-color;
+}
+
+@mixin text-background-color-hover{
+    color:$text-color-hover;
+    background-color: $list-background-hover;
+}
+
+@mixin box-sizing($num){
+    box-sizing: $num;
+}
+
+@mixin transition($property, $duration, $timing:linear){
+    transition-property: $property;
+    transition-duration: $duration;
+    transition-timing-function:$timing;
+    -moz-transition: $property $duration $timing;
+    -webkit-transition: $property $duration $timing;
+}
+
+@mixin animation($name,$duration, $timing:linear){
+    animation-name: $name;
+    animation-duration: $duration;
+    animation-timing-function: $timing;
+    -moz-animation: $name $duration $timing;
+    -webkit-animation: $name $duration $timing;
+}
+
+@mixin responsive($size){
+    @if $size == medium{ //max 1024px
+        @media (max-width : 1024px){
+            @content;
+        }
+
+    }
+
+    @if $size == small{ //max 800px
+        @media (max-width: 800px) {
+            @content;
+        // float: none;
+        // width: 100%;
+        }
+    }
+
+    // @if $type == "mobile"{
+    //     @media (min-width:320px){
+    //         @content;
+    //     }
+    // } @else if $type == "desktop"{
+
+    //     @content
+    // }
+}
+
+
+// @media (min-width:320px)  { /* smartphones, iPhone, portrait 480x320 phones */ }
+// @media (min-width:481px)  { /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */ }
+// @media (min-width:641px)  { /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */ }
+// @media (min-width:961px)  { /* tablet, landscape iPad, lo-res laptops ands desktops */ }
+// @media (min-width:1025px) { /* big landscape tablets, laptops, and desktops */ }
+// @media (min-width:1281px) { /* hi-res laptops and desktops */ }

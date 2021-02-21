@@ -1,0 +1,116 @@
+$images: (
+    (icon-menu, "../../images/menu.png", 0px,0px,30px,32px),
+    (icon-news, "../../images/news.png", 0px,-90px,30px,39px),
+    (icon-money, "../../images/money.png", 0px,-100px,50px,54px),
+    (icon-contact, "../../images/contact.png", 0px,0px,30px,30px),
+
+);
+
+%button-block{
+    box-sizing: border-box;
+    width: 100%;
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 1px solid transparent;
+    cursor: pointer;
+}
+
+%input-block {
+    box-sizing: border-box;
+    width: 100%;
+    border-radius: 5px;
+    padding: 5px 10px;
+    border: 1px solid #bbb;
+}
+
+#contenido{
+    padding: 30px 20px;
+    @include responsive("medium") {
+        padding: 10px 20px;
+      }
+    .col-left{
+        @include box-sizing(border-box);
+        width: 30%;
+        float: left;
+        padding: 10px;
+        .login{
+            @extend %input-block;
+        }
+        @include responsive("medium") {
+            float: none;
+            width: 100%;
+          }
+      
+    }
+
+    .col-right{
+        @include box-sizing(border-box);
+        margin-left: 30%;
+        width: 70%;
+        padding: 10px;
+        h1{
+            color: $title-color;
+            // font-size: 1.6em;
+        }
+        @include responsive("medium") {
+            margin-left: 0;
+            width: 100%;
+        }
+    }
+
+    .button-action{
+        @include text-background-color;
+        @extend %button-block;
+        @if $theme == "light"{
+            background-color: darken(#eee,10%);
+        } @else if $theme == "darken"{
+            background-color:  lighten(#eee, 20%);
+        }
+        // background-color: $background-color;
+        // color: white;
+
+    }
+    .button-action:hover{
+        background-color: lighten($background-color, 20%);
+    }
+}
+
+i {
+    display: inline-block;
+  }
+  @each $class, $image, $X, $Y, $height, $width in $images {
+    .#{$class} {
+      background-image: url("#{$image}");
+      background-position: $X $Y;
+      height: $height;
+      width: $width;
+    }
+  }
+
+  header{
+    padding: 12px 30px;
+    font-size: 1.8em;
+    // @include text-background-color;
+    // No llamo al mixin porque no concuerda con la imagen de ejemplo del moodle
+    color: #444;
+    background-color: #eee;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px #aaa;
+    font-family: Georgia, "Times New Roman", Times, serif;
+  }
+
+  body {
+    padding: 0px;
+    margin: 0px;
+  }
+
+  footer {
+    // color: #eee;
+    // background-color: #15a;
+    @include text-background-color();
+    @include box-sizing(border-box);
+    position: fixed;
+    width: 100%;
+    bottom: 0px;
+    padding: 5px;
+  }
